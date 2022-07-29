@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.menu-item{
+    @apply hover:text-white font-semibold duration-300 text-lg
+}
+.dir-link {
+    @apply hover:text-white hover:bg-red-800 font-semibold duration-300 text-base bg-white text-red-500 px-5 py-2 rounded-3xl
+}
+
+.button-second{
+    @apply py-3 bg-orange-400 text-white hover:bg-red-800 
+}
