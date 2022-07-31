@@ -3,36 +3,49 @@
 @tailwind utilities;
 
 
-.menu-item{
+.menu-item {
     @apply hover:text-white font-semibold duration-300 text-lg
 }
+
 .dir-link {
     @apply hover:text-white hover:bg-red-800 font-semibold duration-300 text-base bg-white text-red-500 px-5 py-2 rounded-3xl
 }
 
-.button-second{
-    @apply py-3 bg-orange-400 text-white hover:bg-red-800 
+.button-second {
+    @apply py-3 bg-orange-400 text-white hover:bg-red-800
 }
-.menu-lg{
+
+.menu-lg {
     @apply fixed z-20 w-full h-full bg-green-700 top-0 left-0 flex-col items-center justify-center gap-16
 }
 
- .open {
-        display: flex !important;
-        flex-direction: column ;
-        animation: open .5s linear forwards;
+ .nav-menu.open {
+    display: flex !important;
+    flex-direction: column;
+    animation: open .5s linear forwards;
+}
+
+.toggle ion-icon {
+    --ionicon-stroke-width: 42px;
+}
+
+
+@keyframes open {
+    0% {
+        transform: translateX(100%)
     }
 
-    .toggle ion-icon {
-        --ionicon-stroke-width: 42px;
+    100% {
+        transform: translateX(50%)
     }
+}
 
 
-    @keyframes open {
-        0%{
-            transform: translateX(100%)
-        }
-        100%{
-            transform: translateX(50%)
-        }
-    }
+.overlay.open {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+        background: rgb(0 0 0 / 29%);
+    z-index: 40;
+}

@@ -12,9 +12,10 @@
     <title>Document</title>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden relative">
+    <div class="overlay"></div>
     <nav
-        class="flex justify-between items-center px-20 bg-red-500 py-2 border-b-2 border-red-400 fixed top-0 left-0 z-50 w-full">
+        class="flex justify-between items-center px-20 bg-red-500 py-2 border-b-2 border-red-400 fixed top-0 left-0 z-50 w-full ">
 
         <img class="w-16 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
 
@@ -23,7 +24,7 @@
         </div>
 
         <ul
-            class="nav-menu space-x-11 text-white/80 flex items-center lg:hidden lg:space-x-0 lg:fixed lg:top-0 lg:left-0 lg:h-screen lg:w-full lg:pl-20 lg:bg-red-500 lg:z-40 lg:gap-16 lg:justify-center lg:items-start ">
+            class="nav-menu space-x-11 text-white/80 flex items-center lg:hidden lg:space-x-0 lg:fixed lg:top-0 lg:left-0 lg:h-screen lg:w-full lg:pl-20 lg:bg-red-500 lg:z-40 lg:gap-16 lg:justify-center lg:items-start">
             <li class="text-white menu-item"><a href="">Home</a></li>
             <li class="menu-item"><a href="">Blog</a></li>
             <li class="menu-item"><a href="">Portfolio</a></li>
@@ -303,7 +304,7 @@
             </div>
         </section>
 
-        <section class="newsLetter mb-20">
+        <section class="newsLetter pb-20">
             <div
                 class="w-3/4 grid grid-cols-2 items-center mx-auto bg-gradient-to-r from-indigo-500 via-purple-500
                 to-pink-500 text-white py-16 px-10 rounded-xl sm:grid-cols-1">

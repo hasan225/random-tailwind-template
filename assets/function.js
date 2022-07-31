@@ -1,9 +1,24 @@
 let toggleBtn = document.querySelector(".toggle")
-// let icon = document.querySelector(".icon")
+let overlay = document.querySelector(".overlay")
 
-toggleBtn.addEventListener("click",(e)=>{
+
+
+let open = document.querySelector('.open');
+let close = document.querySelector('.close');
+
+ 
+let overlayWithToggle = [overlay, toggleBtn]
+
+ overlayWithToggle.forEach((each)=>{
+
+    each.addEventListener("click",(e)=>{
     let navMenu = document.querySelector(".nav-menu")
-    navMenu.classList.toggle('open')
+    
+let menuWithLayer = [ navMenu, overlay ]
+
+menuWithLayer.forEach((each)=>{
+    each.classList.toggle("open")
+})
       
     let icon = toggleBtn.childNodes[1]
 
@@ -16,3 +31,5 @@ toggleBtn.addEventListener("click",(e)=>{
     
   
 })
+ })
+
